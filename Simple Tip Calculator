@@ -1,0 +1,39 @@
+print("Tip Calculator")
+
+#Bill_Amount = 0
+#Tip_Rate = 0
+#Tip = 0
+#Total = 0
+#print(f"Bill_Amount = {Bill_Amount}", f"Tip_Rate = {Tip_Rate}", f"Tip = {Tip}", f"Total = {Total}", sep="\n")
+
+#Creating an empty dicionary to store answers"
+answers = {}
+
+#Ask the first question and store the response
+answers['Bill_Amount'] = input("what is the Bill Amount? £")
+
+#Ask the second question and store the response
+answers['Tip_Rate'] = input("what is the tip rate(%)? ")
+
+#Convert Inputs to numbers specifically (floats)
+Bill_Amount = float(answers['Bill_Amount'])
+Tip_Rate = float(answers['Tip_Rate'])
+
+#Calculating the Tip
+Tip = (Tip_Rate/100)*Bill_Amount
+
+#Calculating the total
+Total = Tip + Bill_Amount
+
+#The Display
+print("\nSummary")
+for question, answer in answers.items():
+    print(f"{question}: {answer}")
+
+print(f"Tip = £{Tip}")
+print()
+print()
+print(f"Total = £{Total}")
+
+#End
+print(f"Your Total Amount Payable will be £{Total} ")
